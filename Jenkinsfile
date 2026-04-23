@@ -4,6 +4,6 @@ node {
   }
   stage('Compile a package'){
     dev mvnHome = tool name: 'Maven3', type: 'maven'
-    sh "${mvnHome}/bin/mvn clean package'
+    sh "${mvnHome}/bin/mvn package'
   }
 }
