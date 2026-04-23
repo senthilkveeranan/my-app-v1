@@ -3,6 +3,7 @@ node {
     git 'https://github.com/senthilkveeranan/my-app-v1.git'
   }
   stage('Compile a package'){
-    sh '/opt/maven-3.9.15/bin/mvn clean package'
+    dev mvnHome = tool name: 'Maven3', type: 'maven'
+    sh "${mvnHome}/bin/mvn clean package'
   }
 }
